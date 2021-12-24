@@ -40,7 +40,7 @@ Feature: Groups kept during enrolment on course completion
     And I log out
 
     When I am on the "C2" "Course" page logged in as "teacher1"
-    And I navigate to "Users > Enrolment methods" in current page administration
+    And I am on the "Course 2" "enrolment methods" page
     And I select "Course completed enrolment" from the "Add method" singleselect
     When I set the following fields to these values:
        | Course | Course 1 |

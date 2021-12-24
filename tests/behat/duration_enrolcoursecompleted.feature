@@ -29,8 +29,7 @@ Feature: Duration Enrolment on course completion
 
   @javascript
   Scenario: Course completion with duration set
-    When I am on "Course 2" course homepage
-    And I navigate to "Users > Enrolment methods" in current page administration
+    Given I am on the "Course 2" "enrolment methods" page
     And I select "Course completed enrolment" from the "Add method" singleselect
     And I set the following fields to these values:
        | Course                  | Course 1 |

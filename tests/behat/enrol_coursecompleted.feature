@@ -37,8 +37,7 @@ Feature: Enrolment on course completion
     And I expand all fieldsets
     And I set the field "Teacher" to "1"
     And I press "Save changes"
-    And I am on "Course 2" course homepage
-    And I navigate to "Users > Enrolment methods" in current page administration
+    And I am on the "Course 2" "enrolment methods" page
     And I select "Course completed enrolment" from the "Add method" singleselect
 
   Scenario: When a course is completed, a user is automatically enrolled into another course
