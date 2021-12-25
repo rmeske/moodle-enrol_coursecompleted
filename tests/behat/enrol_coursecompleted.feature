@@ -146,8 +146,7 @@ Feature: Enrolment on course completion
     And I click on "Unenrol" "button" in the "Unenrol" "dialogue"
     And I click on "//a[@data-action='unenrol']" "xpath_element" in the "teacher1" "table_row"
     And I click on "Unenrol" "button" in the "Unenrol" "dialogue"
-    When I am on "Course 2" course homepage
-    And I navigate to "Users > Enrolment methods" in current page administration
+    And I am on the "Course 2" "enrolment methods" page
     And I wait until the page is ready
     And I click on "[aria-label='Enrol users']" "css_element" in the "tr.lastrow" "css_element"
     Then I should see "Username 1"
@@ -156,8 +155,9 @@ Feature: Enrolment on course completion
     And I am on "Course 2" course homepage
     And I navigate to course participants
     Then I should see "Username 1" in the "participants" "table"
+    Then I should see "Course 2"
     And I click on "[title='Course completion']" "css_element"
-    Then I should see "C1"
+    Then I should see "Course 1"
     And I should see "Aggregation method"
 
   Scenario: Bulk unenrol users
