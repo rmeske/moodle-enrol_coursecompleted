@@ -47,7 +47,8 @@ Feature: Enrolment on course completion
     And I am on "Course 2" course homepage
     And I log out
     When I am on the "C1" "Course" page logged in as "teacher1"
-    And I navigate to "Reports > Course completion" in current page administration
+    And I navigate to "Reports" in current page administration
+    And I select "Course completion" from the "Report type" singleselect
     And I follow "Click to mark user complete"
     And I log out
     And I log in as "admin"
@@ -74,7 +75,8 @@ Feature: Enrolment on course completion
     And I am on "Course 2" course homepage
     And I log out
     When I am on the "C1" "Course" page logged in as "teacher1"
-    And I navigate to "Reports > Course completion" in current page administration
+    And I navigate to "Reports" in current page administration
+    And I select "Course completion" from the "Report type" singleselect
     And I follow "Click to mark user complete"
     # Running completion task just after clicking sometimes fail, as record
     # should be created before the task runs.
@@ -100,7 +102,8 @@ Feature: Enrolment on course completion
     And I am on "Course 2" course homepage
     And I log out
     When I am on the "C1" "Course" page logged in as "teacher1"
-    And I navigate to "Reports > Course completion" in current page administration
+    And I navigate to "Reports" in current page administration
+    And I select "Course completion" from the "Report type" singleselect
     And I follow "Click to mark user complete"
     # Running completion task just after clicking sometimes fail, as record
     # should be created before the task runs.
@@ -125,7 +128,8 @@ Feature: Enrolment on course completion
     And I am on "Course 2" course homepage
     And I log out
     When I am on the "C1" "Course" page logged in as "teacher1"
-    And I navigate to "Reports > Course completion" in current page administration
+    And I navigate to "Reports" in current page administration
+    And I select "Course completion" from the "Report type" singleselect
     And I follow "Click to mark user complete"
     And I log out
     And I log in as "admin"
@@ -163,7 +167,8 @@ Feature: Enrolment on course completion
     And I am on "Course 2" course homepage
     And I log out
     When I am on the "C1" "Course" page logged in as "teacher1"
-    And I navigate to "Reports > Course completion" in current page administration
+    And I navigate to "Reports" in current page administration
+    And I select "Course completion" from the "Report type" singleselect
     And I follow "Click to mark user complete"
     And I log out
     And I log in as "admin"
@@ -184,7 +189,8 @@ Feature: Enrolment on course completion
     And I am on "Course 2" course homepage
     And I log out
     When I am on the "C1" "Course" page logged in as "teacher1"
-    And I navigate to "Reports > Course completion" in current page administration
+    And I navigate to "Reports" in current page administration
+    And I select "Course completion" from the "Report type" singleselect
     And I follow "Click to mark user complete"
     And I log out
     And I log in as "admin"

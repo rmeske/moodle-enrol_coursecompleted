@@ -40,7 +40,8 @@ Feature: Duration Enrolment on course completion
     And I am on "Course 2" course homepage
     And I log out
     And I am on the "C1" "Course" page logged in as "teacher1"
-    And I navigate to "Reports > Course completion" in current page administration
+    And I navigate to "Reports" in current page administration
+    And I select "Course completion" from the "Report type" singleselect
     And I follow "Click to mark user complete"
     And I wait "1" seconds
     And I run the scheduled task "core\task\completion_regular_task"
