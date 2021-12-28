@@ -57,11 +57,12 @@ class send_welcome extends \core\task\adhoc_task {
                     $context2 = \context_course::instance($data->completedid);
                     $a = new stdClass();
                     $a->coursename = format_string($course, true, ['context' => $context]);
+                    $a->link = course_get_url($course)->out();
                     $a->profileurl = "$CFG->wwwroot/user/view.php?id=$user->id&course=$data->courseid";
                     $a->completed = format_string($complcourse, true, ['context' => $context2]);
                     $custom = $DB->get_field('enrol', 'customtext1', ['id' => $data->enrolid]);
-                    $key = ['{$a->coursename}',  '{$a->completed}', '{$a->profileurl}', '{$a->fullname}', '{$a->email}'];
-                    $value = [$a->coursename, $a->completed, $a->profileurl, fullname($user), $user->email];
+                    $key = ['{$a->coursename}', '{$a->link}',  '{$a->completed}', '{$a->profileurl}', '{$a->fullname}', '{$a->email}'];
+                    $value = [$a->coursename, $a->link, $a->completed, $a->profileurl, fullname($user), $user->email];
                     if (trim($custom) != '') {
                         $message = str_replace($key, $value, $custom);
                     } else {
